@@ -1,0 +1,15 @@
+sources:
+  - ingress
+provider: rfc2136
+rfc2136:
+  host: ${host}
+  zone: ${zone}
+  tsigSecret: ${tsigSecret}
+  tsigSecretAlg: ${key_algorithm}
+  tsigKeyname: ${key_name}
+  tsigAxfr: true
+metrics:
+  enabled: true
+  serviceMonitor:
+    enabled: true
+logLevel: debug
